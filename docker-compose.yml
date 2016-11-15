@@ -1,0 +1,15 @@
+services:
+  nginxawslamba:
+    build: .
+    working_dir: "/nginx-1.11.5"
+    #working_dir: "/ngx-module"
+    volumes:
+      - "./test:/test"
+      - "./ngx-module:/ngx-module"
+    #command: "./configure --add-module=/ngx-module --with-cc-opt=\"-I/usr/local/include/nginx_aws_lambda\" --with-ld-opt=\"-L /usr/local/bin/nginx_aws_lambda\""
+    #command: "ls /usr/local/lib"
+    command: "sh /test/run.sh"
+    ports:
+      - '80:80'
+
+version: '2'

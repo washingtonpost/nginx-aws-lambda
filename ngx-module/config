@@ -1,0 +1,5 @@
+CORE_LIBS="$CORE_LIBS -laws "
+CXXFLAGS="$CXXFLAGS --std=c++11 "
+ngx_addon_name=ngx_http_hello_world_module
+HTTP_MODULES="$HTTP_MODULES ngx_http_hello_world_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_http_hello_world_module.c $ngx_addon_dir/lambda_wrapper.cpp"
