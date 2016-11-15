@@ -37,6 +37,3 @@ COPY ngx-module/. /ngx-module
 
 # Compile nginx
 WORKDIR nginx-1.11.5
-#RUN ./configure --add-module=/ngx-module --with-cc-opt="-I /usr/local/include/nginx_aws_lambda" --with-ld-opt="-L /usr/local/bin/nginx_aws_lambda"
-#RUN make
-#RUN make install
